@@ -1,0 +1,29 @@
+th {
+	text-align: left;
+}
+.table {
+	width: 50%;
+}
+
+.btn-block {
+	width: 50%
+}
+.centered-left {
+	margin-left: 25%;
+}
+
+.centered-right {
+	margin-left: 75%;
+}
+
+.thin {
+	width: 5%;
+}
+
+.red {
+	color: #d43f3a;
+}
+
+.footer {
+	margin-bottom: 30px;
+}

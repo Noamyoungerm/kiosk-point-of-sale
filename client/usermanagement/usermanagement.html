@@ -1,0 +1,21 @@
+<!-- Implements a template manager that defines a table and iterates over each daily student's day-ticket
+TODO: Formatting, especially the table headers -->
+
+<template name="usermanagement">
+	<h1>יומיים</h1>
+	<table class="table">
+		<thead>
+		<tr>
+			<th>Name</th>
+			<th>Email</th>
+			<th>Roles</th>
+			<th></th>
+		</tr>
+		</thead>
+		<tbody>
+		{{#each userManager}}
+			{{> userRow}}
+		{{/each}}
+		</tbody>
+	</table>
+</template>

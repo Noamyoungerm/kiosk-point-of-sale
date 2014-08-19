@@ -1,0 +1,9 @@
+<template name="item">
+<tr class="item">	
+	<td>{{name}}</td>
+	<td>{{qty}}</td>
+	<td>{{saleprice}}</td>
+	<td>{{purchaseprice}}</td>
+	<td>{{#if isInRole 'admin'}}<a href="{{pathFor 'itemEdit'}}">Edit</a>{{/if}}</td>
+</tr>
+</template>

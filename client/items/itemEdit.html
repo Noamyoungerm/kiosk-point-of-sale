@@ -1,0 +1,33 @@
+<template name="itemEdit">
+	<form class="main">
+	<div class="row">
+		<div class="col-md-3">
+			<label class="control-label" for="nameinput">Name</label>
+			<input name="nameinput" type="text" value="{{name}}" class="form-control">
+		</div>
+
+		<div class="col-md-2">
+			<label class="control-label" for="quantityinput">Quantity</label>
+			<input name="quantityinput" type="number" value="{{qty}}" class="form-control" min="0">
+		</div>
+
+		<div class="col-md-2">
+			<label class="control-label" for="saleinput">Sale Price</label>
+			<input name="saleinput" type="number" value="{{saleprice}}" class="form-control" min="0" step="0.1">
+		</div>
+
+		<div class="col-md-2">
+			<label class="control-label" for="purchaseinput">Purchase Price</label>
+			<input name="purchaseinput" type="number" value="{{purchaseprice}}" class="form-control" min="0" step="0.1">
+		</div>
+
+		<div class="col-md-3"><br>
+		<input type="submit" value="Save" class="btn btn-primary"/>
+		{{#unless isNewItem}}
+		<button id="delete-button" class="btn btn-danger" type="button">Delete</button>
+		{{/unless}}
+		</div>
+
+	</div>
+	</form>
+</template>

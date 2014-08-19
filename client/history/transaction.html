@@ -1,0 +1,8 @@
+<template name="transaction">
+<tr class="transaction">	
+	<td>{{dateFormatted date}}</td>
+	<td>{{priceFormatted total}}</td>
+	<td>{{priceFormatted profit}}</td>
+	<td><a href="{{pathFor 'transactionView'}}">Details</a></td>
+</tr>
+</template>

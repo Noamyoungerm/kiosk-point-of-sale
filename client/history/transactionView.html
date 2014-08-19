@@ -1,0 +1,32 @@
+<template name="transactionView">
+	<h1 class="page-header centered-left">Transaction Details</h1>
+	<div class="row centered-left">
+			<p><strong>Date: </strong>{{dateFormatted date}}</p>
+			<p><strong>Total: </strong>{{priceFormatted total}}</p>
+			<p><strong>Profit: </strong>{{priceFormatted profit}}</p>
+	</div>
+	<div class="row">
+		<table class="table centered-left">
+			<thead>
+				<tr>
+					<th class="text-left">Name</th>
+					<th class="text-left">Price</th>
+				</tr>
+			</thead>
+			<tbody id="itemlist">
+				{{#each this.items}}
+					<tr>
+						<td>{{name}}</td>
+						<td>{{priceFormatted saleprice}}</td>
+					</tr>
+				{{/each}}
+			</tbody>
+		</table>
+	</div>
+	{{#if isInRole 'admin'}}
+	<div class="row">
+		<button type="button" class="btn btn-primary btn-block half centered-left">Edit</button>
+		<button type="button" id="delete-button" class="btn btn-danger btn-block half centered-left">Delete</button>
+	</div>
+	{{/if}}
+</template>

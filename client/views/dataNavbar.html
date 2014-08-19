@@ -1,0 +1,17 @@
+<!-- A template containing a navigation bar that allows viewing various data types by date, or by currently open tickets. Recieves a context containing the route names of the 'default view' and the 'date view'
+TODO: Today is not the best default value for the date selector if the date is changed in a search. Low priority.
+-->
+
+<template name="dataNavbar">
+	<div class="btn-toolbar centered-left">
+		<div class="input-group">
+		  <input id="searchdate-input" type="text" class="form-control" value="{{today}}">
+		</div>
+		<div class="btn-group">
+		  <button type="button" id="searchdate-day" class="btn btn-default searchdate">Day</button>
+		  <button type="button" id="searchdate-month" class="btn btn-default searchdate">Month</button>
+		  <button type="button" id="searchdate-year" class="btn btn-default searchdate">Year</button>
+		</div>
+
+	</div>
+</template>

@@ -1,0 +1,22 @@
+<template name="inventory">
+	<h1>Inventory</h1>
+	{{#if isInRole 'admin'}}
+	<button id="create-button" class="btn btn-primary" type="button">Add Item</button>
+	{{/if}}
+	<table class="table">
+		<thead>
+		<tr>
+			<th>Name</th>
+			<th>Quantity</th>
+			<th>Sale Price</th>
+			<th>Purchase Price</th>
+			<th></th>
+		</tr>
+		</thead>
+		<tbody>
+		{{#each itemManager}}
+			{{> item}}
+		{{/each}}
+		</tbody>
+	</table>
+</template>
