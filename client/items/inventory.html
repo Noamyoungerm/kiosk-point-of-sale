@@ -7,10 +7,10 @@
 		<thead>
 		<tr>
 			<th>Name</th>
-			<th>Quantity</th>
+			{{#if isInRole "admin"}}<th>Quantity</th>{{/if}}
 			<th>Sale Price</th>
-			<th>Purchase Price</th>
-			<th></th>
+			{{#if isInRole "admin"}}<th>Purchase Price</th>
+			<th></th>{{/if}}
 		</tr>
 		</thead>
 		<tbody>
