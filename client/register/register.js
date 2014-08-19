@@ -68,9 +68,12 @@ Template.register.events = {
         });
     });
     Meteor.call('insertTransaction', purchaseItems, function(error, id){
-      if(error) console.log(error);
+      if(error) {
+       console.log(error);
+      } else {
+        Session.set("purchaseItems", []);
+      }
     });
-
   }
 };
 
