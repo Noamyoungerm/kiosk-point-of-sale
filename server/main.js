@@ -1,13 +1,18 @@
 Meteor.startup(function () {
+	var SIGNUP_CODE = '';
+	var ADMIN_PASSWORD = '';
+	if(SIGNUP_CODE == '' || ADMIN_PASSWORD == ''){
+		throw new Meteor.Error("Passwords must be set");
+	}
 	AccountsEntry.config({
-	  signupCode: 'z9ZRwzCpD61en3k8Npuj',
+	  signupCode: SIGNUP_CODE,
 	});
 
 	if(Meteor.users.find().count() == 0){
 		console.log("Created Default Administrator")
 		adminId = Accounts.createUser({
 		  email: "administrator@admin.net",
-		  password: "y2hfochd5a",
+		  password: ADMIN_PASSWORD,
 		  profile: {
 		  	name: "Administrator",
 		  }

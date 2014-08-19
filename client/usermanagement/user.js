@@ -12,8 +12,7 @@ Template.userRow.helpers({
 Template.userRow.events = {
   "click #set-role": function(e) {
     e.preventDefault();
-    var role = $("#role-0-" + this._id).is(':checked') ? $("#role-0").val() : "none";
-    console.log(role);
+    var role = $("#role-0-" + this._id).is(':checked') ? $("#role-0-" + this._id).val() : "none";
     Meteor.call('setUserRole', this._id, role, function(error, id){
     	if(error) {
         console.log(error);
