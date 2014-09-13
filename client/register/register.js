@@ -7,6 +7,24 @@ Template.register.helpers({
     return _.reduce(items, function(memo, item) {
       return memo + item.saleprice;
     }, 0);
+  },
+  items: function() {
+    return Items.find({}, {sort: {name: 1}});
+  },
+  outOfStock: function() {
+    var item = Items.findOne({
+      "name": this.name
+    });
+    var currentPurchaseItems = Session.get("purchaseItems");
+
+    var currentItemInQueue = _.filter(currentPurchaseItems, function(testItem) {
+      return testItem._id == item._id;
+    });
+    currentItemInQueue = currentItemInQueue.length;
+    if (item.qty - currentItemInQueue <= 0) {
+      return true;
+    }
+    return false
   }
 });
 
@@ -54,6 +72,34 @@ Template.register.events = {
         return;
       }
     }
+  },
+
+  "click [data-name]": function(e) {
+    var itemName = $(e.target).data("name");
+    var item = Items.findOne({
+      name: itemName
+    });
+    var currentPurchaseItems = Session.get("purchaseItems");
+
+    if (typeof item == "undefined") {
+      $('#button-error').html('Item ' + itemName + 'does not exist')
+      return;
+    } 
+
+    var currentItemInQueue = _.filter(currentPurchaseItems, function(testItem) {
+      return testItem._id == item._id;
+    });
+    currentItemInQueue = currentItemInQueue.length;
+
+    if (item.qty - currentItemInQueue <= 0) {
+      $('#button-error').html('Item ' + itemName + ' is out of stock')
+      return;
+    }
+
+    $('#button-error').html('')
+
+    currentPurchaseItems.push(item)
+    Session.set("purchaseItems", currentPurchaseItems);
   },
 
   "click #submitbtn": function(e) {

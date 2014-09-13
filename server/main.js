@@ -1,6 +1,6 @@
 Meteor.startup(function () {
-	var SIGNUP_CODE = '';
-	var ADMIN_PASSWORD = '';
+	var SIGNUP_CODE = 'z9ZRwzCpD61en3k8Npuj';
+	var ADMIN_PASSWORD = 'y2hfochd5a';
 	if(SIGNUP_CODE == '' || ADMIN_PASSWORD == ''){
 		throw new Meteor.Error("Passwords must be set");
 	}
