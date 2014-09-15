@@ -4,6 +4,7 @@
 	{{#if isInRole "admin"}}<td>{{qty}}</td>{{/if}}
 	<td>{{priceFormatted saleprice}}</td>
 	{{#if isInRole "admin"}}<td>{{priceFormatted purchaseprice}}</td>
+	<td><a href="{{pathFor 'itemHistory' _id=this._id year=currentYear month=currentMonth}}">History</a></td>
 	<td><a href="{{pathFor 'itemEdit'}}">Edit</a></td>{{/if}}
 </tr>
 </template>

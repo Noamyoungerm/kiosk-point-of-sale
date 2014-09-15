@@ -30,7 +30,5 @@ Template.history.helpers({
                   }, 0);
     }
     return total;
-  },
-
-
+  }
 });

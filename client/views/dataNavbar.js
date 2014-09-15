@@ -23,6 +23,9 @@ Template.dataNavbar.events({
 			urlSlug.day = date.format("DD");
 		}
 
+		if(typeof this.data !== "undefined") {
+			urlSlug = _.extend(urlSlug, this.data)
+		}
 		Router.go(this.viewTemplate, urlSlug);
 	}
 });

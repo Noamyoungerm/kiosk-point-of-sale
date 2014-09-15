@@ -14,6 +14,9 @@ th {
 	margin-bottom: 30px;
 }
 
+.margin-top {
+	margin-top: 0.5em;
+}
 .button-panel {
 	direction: rtl;
 	text-align: right;

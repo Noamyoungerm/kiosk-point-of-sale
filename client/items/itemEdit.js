@@ -1,6 +1,9 @@
 Template.itemEdit.helpers = {
   isNewItem: function() {
     return this._id == null || this._id == "null";
+  },
+  defaultDate: function() {
+    return moment().startOf("month");
   }
 }
 //If I feel like it, condense this into item.js like the user profile edit
