@@ -5,9 +5,9 @@
 
 standard-app-packages
 accounts-password
-mrt:moment@2.8.1
 alanning:roles
 joshowens:accounts-entry
 iron:router
-mizzao:bootstrap-3
 
+twbs:bootstrap
+momentjs:moment

@@ -1,20 +1,20 @@
 <template name="history">
-	<h1 class="page-header centered-left">History</h1>
-	{{> dataNavbar viewTemplate="history_date"}}
-	<table class="table">
-		<thead>
-		<tr>
-			<th>Date</th>
-			<th>Revenue</th>
-			<th>Profit</th>
-			<th></th>
-		</tr>
-		</thead>
-		<tbody>
-		{{#each transactionManager}}
-			{{> transaction}}
-		{{/each}}
-		<tr class="info"><td><strong>Total</strong></td><td>{{priceFormatted totalRevenue}}</td><td>{{priceFormatted totalProfit}}</td></tr>
-		</tbody>
-	</table>
+  <h1 class="page-header centered-left">History</h1>
+  {{> dataNavbar viewTemplate="history_date"}}
+  <table class="table">
+    <thead>
+    <tr>
+      <th>Date</th>
+      <th>Revenue</th>
+      <th>Profit</th>
+      <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#each transactionManager}}
+      {{> transaction}}
+    {{/each}}
+    <tr class="info"><td><strong>Total</strong></td><td>{{priceFormatted totalRevenue}}</td><td>{{priceFormatted totalProfit}}</td></tr>
+    </tbody>
+  </table>
 </template>

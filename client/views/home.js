@@ -1,3 +1,3 @@
-Template.home.rendered = function(){
-	Router.go('/sign-in');
+Template.home.rendered = function() {
+    Router.go('/sign-in');
 }

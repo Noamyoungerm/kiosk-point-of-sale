@@ -1,29 +1,29 @@
 <template name="itemHistory">
-	<div class="row margin-top">
-	<div class="col-md-4">
-		{{> dataNavbar viewTemplate="itemHistory" data=itemData}}
-	</div>
-	</div>
-	<div class="row">
-	<div class="col-md-3">
-	<table class="table">
-		<thead>
-		<tr>
-			<th>Date</th>
-			<th>Quantity</th>
-			<th>Profit</th>
-		</tr>
-		</thead>
-		<tbody>
-		<tr class="info"><td><strong>Total</strong></td><td>{{totalQuantity}}</td><td><strong>{{priceFormatted totalProfit}}</strong> / {{priceFormatted totalRevenue}}</td></tr>
-		{{#each itemDataManager}}
-			<tr>
-				<td>{{dateText}}</td><td>{{qty}}</td><td>{{priceFormatted profit}}</td>
-			</tr>
-		{{/each}}
-		<tr class="info"><td><strong>Total</strong></td><td>{{totalQuantity}}</td><td><strong>{{priceFormatted totalProfit}}</strong> / {{priceFormatted totalRevenue}}</td></tr>
-		</tbody>
-	</table>
-	</div>
-	</div>
+  <div class="row margin-top">
+  <div class="col-md-4">
+    {{> dataNavbar viewTemplate="itemHistory" data=itemData}}
+  </div>
+  </div>
+  <div class="row">
+  <div class="col-md-3">
+  <table class="table">
+    <thead>
+    <tr>
+      <th>Date</th>
+      <th>Quantity</th>
+      <th>Profit</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="info"><td><strong>Total</strong></td><td>{{totalQuantity}}</td><td><strong>{{priceFormatted totalProfit}}</strong> / {{priceFormatted totalRevenue}}</td></tr>
+    {{#each itemDataManager}}
+      <tr>
+        <td>{{dateText}}</td><td>{{qty}}</td><td>{{priceFormatted profit}}</td>
+      </tr>
+    {{/each}}
+    <tr class="info"><td><strong>Total</strong></td><td>{{totalQuantity}}</td><td><strong>{{priceFormatted totalProfit}}</strong> / {{priceFormatted totalRevenue}}</td></tr>
+    </tbody>
+  </table>
+  </div>
+  </div>
 </template>

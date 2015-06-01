@@ -1,16 +1,16 @@
 <template name="userRow">
-<tr>	
-	<td>{{profile.name}}</td>
-	<td>{{emailAddr}}</td>
-	<td><div class="form-group">
-	  <label class="col-md-4 control-label" for="role-checkboxes"></label>
-	  <div class="col-md-4">
-	    <label class="checkbox-inline" for="role-0">
-	      <input type="checkbox" name="role" id="role-0-{{_id}}" value="admin" checked="{{defaultCheck}}">
-	      Admin
-	    </label>
-	  </div>
-	</div></td>	
-	<td><button id="set-role" class="btn btn-primary btn-mini" type="button">Set</button></td>
+<tr>  
+  <td>{{profile.name}}</td>
+  <td>{{emailAddr}}</td>
+  <td><div class="form-group">
+    <label class="col-md-4 control-label" for="role-checkboxes"></label>
+    <div class="col-md-4">
+      <label class="checkbox-inline" for="role-0">
+        <input type="checkbox" name="role" id="role-0-{{_id}}" value="admin" checked="{{defaultCheck}}">
+        Admin
+      </label>
+    </div>
+  </div></td>  
+  <td><button id="set-role" class="btn btn-primary btn-mini" type="button">Set</button></td>
 </tr>
 </template>

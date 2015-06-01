@@ -8,12 +8,12 @@ TODO: If isInRole handlebars to make differnt users have different tabs -->
 <div class="navbar-header">
 <div class="navbar-inner">
     <ul class="nav navbar-nav">
-	<li><a href="{{pathFor 'inventory'}}" class="navbar-btn">Inventory</a></li>
-	{{#if isInRole "admin"}}<li><a href="{{pathFor 'history'}}" class="navbar-btn">History</a></li>{{/if}}
-	<li><a href="{{pathFor 'register'}}" class="navbar-btn">Register</a></li>
-	{{#if isInRole "admin"}}<li><a href="{{pathFor 'usermanagement'}}" class="navbar-btn">Manage Roles</a></li>{{/if}}
-	<li><a href="/sign-out" class="navbar-btn">Sign Out</a></li>
-	</ul>
+  <li><a href="{{pathFor 'inventory'}}" class="navbar-btn">Inventory</a></li>
+  {{#if isInRole "admin"}}<li><a href="{{pathFor 'history'}}" class="navbar-btn">History</a></li>{{/if}}
+  <li><a href="{{pathFor 'register'}}" class="navbar-btn">Register</a></li>
+  {{#if isInRole "admin"}}<li><a href="{{pathFor 'usermanagement'}}" class="navbar-btn">Manage Roles</a></li>{{/if}}
+  <li><a href="/sign-out" class="navbar-btn">Sign Out</a></li>
+  </ul>
 </div>
 </div>
 </nav>
@@ -22,5 +22,6 @@ TODO: If isInRole handlebars to make differnt users have different tabs -->
 {{> yield}}
 </div>
 <div class="footer">
+<p class="text-center"><span class="small"><a href="{{pathFor 'about'}}">אודות התכנה</a></span></p>
 </div>
 </template>

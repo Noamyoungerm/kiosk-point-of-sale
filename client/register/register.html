@@ -1,63 +1,63 @@
 <template name="register">
-	<h1 class="centered-left page-header">Register</h1>
-	<div class="row">
-	<div class="col-md-8">
-	<table class="table">
-		<thead>
-			<tr>
-				<th class="text-left">Name</th>
-				<th class="text-left">Price</th>
-				<th class="text-left"></th>
-			</tr>
-		</thead>
-		<tbody id="itemlist">
-			{{#each purchaseItems}}
-				<tr>
-					<td>{{name}}</td>
-					<td>{{priceFormatted saleprice}}</td>
-					<td><button type="button" class="btn btn-link removebtn">
-					  <span class="glyphicon glyphicon-remove red thin" id="removebtn-{{_id}}"></span>
-					</button></td>
-				</tr>
-			{{/each}}
-			<tr><td colspan="3">
-				<form class="form-inline" id="entryform">
-				<div class="form-group">
-				  <input type="text" id="itementry" name="itementry" class="form-control" placeholder="Product Name">
-				  <label id="itementry-error" for="itementry" class="control-label"></label>
-				</div>
-				</form>
-			</td></tr>
-			<tr class="info"><td></td><td colspan="2"><p><strong>Total: </strong>{{priceFormatted total}}</p></td></tr>
+  <h1 class="centered-left page-header">Register</h1>
+  <div class="row">
+  <div class="col-md-8">
+  <table class="table">
+    <thead>
+      <tr>
+        <th class="text-left">Name</th>
+        <th class="text-left">Price</th>
+        <th class="text-left"></th>
+      </tr>
+    </thead>
+    <tbody id="itemlist">
+      {{#each purchaseItems}}
+        <tr>
+          <td>{{name}}</td>
+          <td>{{priceFormatted saleprice}}</td>
+          <td><button type="button" class="btn btn-link removebtn">
+            <span class="glyphicon glyphicon-remove red thin" id="removebtn-{{_id}}"></span>
+          </button></td>
+        </tr>
+      {{/each}}
+      <tr><td colspan="3">
+        <form class="form-inline" id="entryform">
+        <div class="form-group">
+          <input type="text" id="itementry" name="itementry" class="form-control" placeholder="Product Name">
+          <label id="itementry-error" for="itementry" class="control-label"></label>
+        </div>
+        </form>
+      </td></tr>
+      <tr class="info"><td></td><td colspan="2"><p><strong>Total: </strong>{{priceFormatted total}}</p></td></tr>
 
-		</tbody>
-	</table>
-	</div>
-	<div class="col-md-4 button-panel">
-	<label id="button-error" class="control-label red"></label><br>
-	{{#each items}}
-		<button class="btn btn-default" data-name="{{name}}" disabled="{{outOfStock}}">{{name}}</button>
-	{{/each}}
-	</div>
-	</div>
-	<div class="row">
-	<div class="col-md-8">
-	<button type="submit" class="btn btn-primary btn-lg btn-block" id="pay-modal" data-toggle="modal" data-target="#confirmation-modal">Pay</button>
-	</div>
-	</div>
+    </tbody>
+  </table>
+  </div>
+  <div class="col-md-4 button-panel">
+  <label id="button-error" class="control-label red"></label><br>
+  {{#each items}}
+    <button class="btn btn-default" data-name="{{name}}" disabled="{{outOfStock}}">{{name}}</button>
+  {{/each}}
+  </div>
+  </div>
+  <div class="row">
+  <div class="col-md-8">
+  <button type="submit" class="btn btn-primary btn-lg btn-block" id="pay-modal" data-toggle="modal" data-target="#confirmation-modal">Pay</button>
+  </div>
+  </div>
 
 
-	<div class="modal fade" id="confirmation-modal" tabindex="-1" role="dialog" aria-hidden="true">
-	  <div class="modal-dialog">
-	    <div class="modal-content">
-	      <div class="modal-body">
-	        <h2 class="text-center">Confirm Payment of <strong>{{priceFormatted total}}</strong></h2>
-	      </div>
-	      <div class="modal-footer">
-	      	<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-	        <button type="button" class="btn btn-primary" data-dismiss="modal" id="submitbtn">Confirm</button>
-	      </div>
-	    </div><!-- /.modal-content -->
-	  </div><!-- /.modal-dialog -->
-	</div><!-- /.modal -->
+  <div class="modal fade" id="confirmation-modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <h2 class="text-center">Confirm Payment of <strong>{{priceFormatted total}}</strong></h2>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal" id="submitbtn">Confirm</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
 </template>

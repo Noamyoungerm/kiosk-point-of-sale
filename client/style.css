@@ -1,27 +1,27 @@
 th {
-	text-align: left;
+  text-align: left;
 }
 
 .thin {
-	width: 5%;
+  width: 5%;
 }
 
 .red {
-	color: #d43f3a;
+  color: #d43f3a;
 }
 
 .footer {
-	margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .margin-top {
-	margin-top: 0.5em;
+  margin-top: 0.5em;
 }
 .button-panel {
-	direction: rtl;
-	text-align: right;
+  direction: rtl;
+  text-align: right;
 }
 
 .button-panel > button {
-	margin: 3px 0 3px 0;
+  margin: 3px 0 3px 0;
 }
